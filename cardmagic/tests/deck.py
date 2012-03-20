@@ -62,9 +62,5 @@ class CardTests(unittest.TestCase):
             self.assertEqual(card1.rank, card2.rank)
             self.assertEqual(card1.suit, card2.suit)
         
-
-
-        
-
 if __name__ == '__main__':
     unittest.main()
