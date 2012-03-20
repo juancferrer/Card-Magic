@@ -1,0 +1,30 @@
+# Copyright (C) 2012
+# This file is distributed under the same license as the cardmagic package.
+# Juan Carlos Ferrer <juan.carlos@micronixsolutions.com>, 2012.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 2012-03-19\n"
+"PO-Revision-Date: 2012-03-19\n"
+"Last-Translator: Juan Carlos Ferrer <juan.carlos@micronixsolutions.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: card.py:9
+msgid "Clubs"
+msgstr "Clubs"
+
+#: card.py:9
+msgid "Diamonds"
+msgstr "Diamons"
+
+#: card.py:9
+msgid "Hearts"
+msgstr "Hearts"
+
+#: card.py:9
+msgid "Spades"
+msgstr "Spades"
