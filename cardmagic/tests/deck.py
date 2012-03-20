@@ -4,7 +4,7 @@ from collections import defaultdict
 from cardmagic.card import Card, VALID_SUITS, VALID_RANKS 
 from cardmagic.deck import Deck
 
-class CardTests(unittest.TestCase):
+class DeckTests(unittest.TestCase):
     def setUp(self,):
         pass
 
