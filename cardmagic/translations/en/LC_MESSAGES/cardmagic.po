@@ -19,7 +19,7 @@ msgstr "Clubs"
 
 #: card.py:9
 msgid "Diamonds"
-msgstr "Diamons"
+msgstr "Diamonds"
 
 #: card.py:9
 msgid "Hearts"
