@@ -5,6 +5,7 @@ Card Magic
 Installation
 -------------
 ::
+
     git clone git://github.com/juancferrer/Card-Magic.git
     cd Card-Magic
     python setup.py install
@@ -13,6 +14,7 @@ Installation
 Example
 ------------------
 ::
+
     LANG=en_US.UTF-8 python demo.py 
         [7 Hearts, 12 Diamonds, 10 Hearts, 7 Clubs, 6 Hearts, 10 Diamonds, 12 Clubs]
     LANG=es_ES python demo.py 
