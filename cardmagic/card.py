@@ -1,9 +1,11 @@
 import gettext
 import locale
+import os
 
 from cardmagic.exceptions import InvalidRankException, InvalidSuitException
-
-gettext.install('cardmagic', localedir='./translations', unicode=True)
+gettext.install('cardmagic', 
+        localedir=os.path.join(os.path.dirname(__file__),'translations'), 
+        unicode=True)
 
 # Ranks and suits from here: http://en.wikipedia.org/wiki/Playing_card#Styling
 VALID_RANKS = range(1,14) # 1 - 13
