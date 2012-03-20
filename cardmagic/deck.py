@@ -23,7 +23,19 @@ class Deck(object):
         for rank in VALID_RANKS:
             for suit in VALID_SUITS:
                 self.cards.append(Card(suit=suit, rank=rank))
-    
+   
+    def __len__(self,):
+        return len(self.cards)
+
+    def __getitem__(self, index):
+        if isinstance(index, slice):
+            return [card for card in self.cards[index.start:index.stop:index.step]]
+        return self.cards[index]
+
+    def __iter__(self,):
+        for i in self.cards:
+            yield i
+
     def shuffle(self, shuffle_method=random.shuffle, random=random.random):
         '''Shuffles this deck of cards
 
