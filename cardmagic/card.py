@@ -58,7 +58,7 @@ class Card(object):
         return not self.__eq__(other)
 
     def __repr__(self,):
-        return 'Card: %s %s' % (self.rank, VALID_SUITS[self.suit].encode(self._get_encoding()))
+        return '%s %s' % (self.rank, VALID_SUITS[self.suit].encode(self._get_encoding()))
 
     def __unicode__(self,):
-        return 'Card: %s %s' % (self.rank, VALID_SUITS[self.suit].encode(self._get_encoding()))
+        return '%s %s' % (self.rank, VALID_SUITS[self.suit].encode(self._get_encoding()))
