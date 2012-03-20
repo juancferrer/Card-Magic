@@ -21,5 +21,41 @@ class CardTests(unittest.TestCase):
     def test_invalid_suit(self,):
         self.assertRaises(InvalidSuitException, Card, *(1, 'foo'))
 
+    def test_eq(self,):
+        c1 = Card(1, 'Hearts')
+        c2 = Card(1, 'Hearts')
+        self.assertEqual(c1, c2)
+
+    def test_lt(self,):
+        c1 = Card(1, 'Hearts')
+        c2 = Card(2, 'Hearts')
+        self.assertLess(c1, c2)
+
+    def test_le(self,):
+        c1 = Card(1, 'Hearts')
+        c2 = Card(2, 'Hearts')
+        self.assertLessEqual(c1, c2)
+        c2 = Card(1, 'Hearts')
+        self.assertLessEqual(c1, c2)
+
+    def test_gt(self,):
+        c1 = Card(3, 'Hearts')
+        c2 = Card(2, 'Hearts')
+        self.assertGreater(c1, c2)
+
+    def test_ge(self,):
+        c1 = Card(3, 'Hearts')
+        c2 = Card(2, 'Hearts')
+        self.assertGreaterEqual(c1, c2)
+        c2 = Card(2, 'Hearts')
+        self.assertGreaterEqual(c1, c2)
+
+    def test_ne(self,):
+        c1 = Card(3, 'Hearts')
+        c2 = Card(2, 'Hearts')
+        self.assertNotEqual(c1, c2)
+        c2 = Card(3, 'Spades')
+        self.assertNotEqual(c1, c2)
+
 if __name__ == '__main__':
     unittest.main()

@@ -28,6 +28,24 @@ class Card(object):
         self.rank = rank
         self.suit = suit
 
+    def __eq__(self, other):
+        return self.rank == other.rank and self.suit == other.suit
+
+    def __lt__(self, other):
+        return self.rank < other.rank 
+
+    def __gt__(self, other):
+        return self.rank > other.rank 
+
+    def __ge__(self, other):
+        return self.rank >= other.rank 
+
+    def __le__(self, other):
+        return self.rank <= other.rank 
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
     def __repr__(self,):
         return 'Card: %s %s' % (self.rank, self.suit)
 
