@@ -1,13 +1,19 @@
+import gettext
+import locale
+
 from cardmagic.exceptions import InvalidRankException, InvalidSuitException
+
+gettext.install('cardmagic', localedir='./translations', unicode=True)
 
 # Ranks and suits from here: http://en.wikipedia.org/wiki/Playing_card#Styling
 VALID_RANKS = range(1,14) # 1 - 13
-VALID_SUITS = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
+VALID_SUITS = {0:_('Spades'), 1:_('Hearts'), 2:_('Diamonds'), 3:_('Clubs')}
+
 
 class Card(object):
     ''' I am a playing card '''
 
-    def __init__(self, rank=1, suit='Spades'):
+    def __init__(self, rank=1, suit=0):
         ''' Creates a card instance
 
         :arg rank: The rank for this card
@@ -28,6 +34,9 @@ class Card(object):
         self.rank = rank
         self.suit = suit
 
+    def _get_encoding(self,):
+        return locale.getdefaultlocale()[1] #'ISO8859-1', 'UTF-8', etc..
+
     def __eq__(self, other):
         return self.rank == other.rank and self.suit == other.suit
 
@@ -47,7 +56,7 @@ class Card(object):
         return not self.__eq__(other)
 
     def __repr__(self,):
-        return 'Card: %s %s' % (self.rank, self.suit)
+        return 'Card: %s %s' % (self.rank, VALID_SUITS[self.suit].encode(self._get_encoding()))
 
     def __unicode__(self,):
-        return 'Card: %s %s' % (self.rank, self.suit)
+        return 'Card: %s %s' % (self.rank, VALID_SUITS[self.suit].encode(self._get_encoding()))

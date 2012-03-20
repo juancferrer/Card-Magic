@@ -8,4 +8,9 @@ setup(name='Card-Magic',
       author='Juan Carlos Ferrer',
       author_email='juan.carlos@micronixsolutions.com',
       packages=['cardmagic', 'cardmagic.tests'],
+      package_data = {
+          'cardmagic': [
+              'translations/en/LC_MESSAGES/*', 
+              'translations/es/LC_MESSAGES/*'],
+                },
      )

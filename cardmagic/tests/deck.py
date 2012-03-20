@@ -68,7 +68,7 @@ class DeckTests(unittest.TestCase):
 
     def test_getitem(self,):
         deck = Deck()
-        cards = [Card(1, 'Hearts'), Card(2,'Clubs'), Card(3,'Spades')]
+        cards = [Card(1, 2), Card(2,0), Card(3,1)]
         deck.cards = cards
         self.assertEqual(deck[0], cards[0]) # Direct access
         self.assertEqual(deck[1], cards[1]) # Direct access
