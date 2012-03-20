@@ -49,8 +49,7 @@ class DeckTests(unittest.TestCase):
             self.assertTrue(card in copy)
         # Are they in the same order too??
         for card,copied in zip(deck.cards, copy):
-            self.assertEqual(card.rank, copied.rank)
-            self.assertEqual(card.suit, copied.suit)
+            self.assertEqual(card, copied)
 
     def test_shuffle_random(self,):
         deck1 = Deck()
@@ -59,8 +58,7 @@ class DeckTests(unittest.TestCase):
         deck1.shuffle(random=lambda:0.5)
         deck2.shuffle(random=lambda:0.5)
         for card1, card2 in zip(deck1.cards, deck2.cards):
-            self.assertEqual(card1.rank, card2.rank)
-            self.assertEqual(card1.suit, card2.suit)
+            self.assertEqual(card1, card2)
         
 if __name__ == '__main__':
     unittest.main()
