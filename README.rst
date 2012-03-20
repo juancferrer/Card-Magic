@@ -27,5 +27,5 @@ Testing
 --------
 The easiest way to run the tests is to install the package as described above 
 and run **python -m unittest discover -v** in the root
-of the distribution. Tests are located in the *test/* directory.
+of the distribution. Tests are located in the *tests/* directory.
 
